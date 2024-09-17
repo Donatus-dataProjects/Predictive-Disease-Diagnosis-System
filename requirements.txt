@@ -1,5 +1,5 @@
-numpy
-pickle
-streamlit
-streamlit_option_menu
-scikit_learn
+numpy==2.1.1
+pandas==2.2.2
+scikit-learn==1.5.2
+streamlit==1.38.0
+streamlit-option-menu==0.3.13
