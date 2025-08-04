@@ -9,7 +9,7 @@ import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu 
 
-#loading the saved models and since they are in the same directory I don't need to specify their path again.
+#loading the saved models and since they are in the same directory, I don't need to specify their path again.
 #for diabetes model
 diabetes_model = pickle.load(open("diabetes_trained_model.sav", 'rb'))
 
@@ -21,7 +21,7 @@ with st.sidebar:
     
     #creating a function for my option menu
     selected = option_menu('Multiple Disease Prediction System Using ML',
-                           ['Diabetes Predcition', 'Heart Prediction'],
+                           ['Diabetes Prediction', 'Heart Prediction'],
                            icons = ['activity', 'lungs-fill'],
                            default_index = 0)
     
@@ -110,4 +110,5 @@ if selected == 'Heart Prediction':
         else:
             hrt_diagnosis = 'The Person is Not at Risk of Heart Disease'
         
+
         st.success(hrt_diagnosis)
